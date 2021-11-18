@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<body>
+<h2>
+XHR SAMPLE
+
+
+</h2>
+<!--script>
+
+    var xhr =new XMLHttpRequest();
+    console.log(xhr.readyState);
+    xhr.onreadystatechange = function (){
+
+        if(xhr.readyState == 4)
+        {
+            if(xhr.status == 200)
+            {
+                console.log(xhr.responseText);
+            }
+            if(xhr.status == 404)
+            {
+                console.log("internal server error");
+            }
+        }
+    }
+    xhr.open("GET","lol.txt",true);
+    xhr.send();
+
+</script-->
+
+<script src=jquery-3.6.0.js></script>
+    <script>
+        
+        function getdata(){
+
+$.ajax({url: "demo_test",method:"get",success:function(result)
+{$("#container").html(result);},
+error:function(xhr){
+
+alert("error in reading"+xhr.status,""+xhr.statusText);    
+}
+});
+
+        }
+        
+        
+        
+        </script>
+    <button onclick ="getdata()">ritvik sucks
+    </button>
+    <div id="container"></div>  
+
+</body>
